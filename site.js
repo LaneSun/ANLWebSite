@@ -52,7 +52,7 @@ window.SITE = {
                     })
                 }).then(() => {
                     return new Promise((resolve) => {
-                        window.setTimeout(resolve,2000);
+                        window.setTimeout(resolve,8000);
                         // Cmd.delayPrint(80, 1000, [
                         //     "And...",
                         //     " Really Fun ?",
@@ -148,24 +148,20 @@ window.SITE = {
     },
     fun_introduction: {
         title: "ANL - Home Page",
-        maskColor: "#afafaf",
+        maskColor: "rgba(0,0,0,0.5)",
         // language=HTML
         html: `
-            <style>
-                .cmd{
-                    display: none;
-                }
-                .msg{
-                    left: 10%;
-                    bottom: 50%;
-                    position: fixed;
-                    font-size: 40px;
-                    font-family: consolas, monospace;
-                    color: rgb(89, 89, 89);
-                    transform: translateY(50%);
-                }
-            </style>
-            <div class="msg">And...<br>Really Fun ?</div>
+            <link rel="stylesheet" href="styles/fun.css">
+            <div id="yellow">
+                <div id="yellow-top"></div>
+                <div id="yellow-bottom"></div>
+            </div>
+            <div id="beans">
+                <div id="beans-inner">
+                    ・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・
+                </div>
+            </div>
+            <div class="msg"><div id="w1">A</div><div id="w2">n</div><div id="w3">d</div><div id="w4">.</div><div id="w5">.</div><div id="w6">.</div><div id="w7">R</div><div id="w8">e</div><div id="w9">a</div><div id="w10">l</div><div id="w11">l</div><div id="w12">y</div><div id="fun">&nbsp;Fun&nbsp;</div><div id="w14">?</div></div>
         `,
     },
     end_introduction: {
