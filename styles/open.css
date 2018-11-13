@@ -1,0 +1,203 @@
+body {
+    background-color: #ffffff;
+    animation: change-color-blue 1s ease 3s 1 normal forwards;
+}
+
+.cmd {
+    display: none;
+}
+
+.msg {
+    left: 50%;
+    bottom: 70%;
+    position: fixed;
+    font-size: 64px;
+    font-family: consolas, monospace;
+    color: rgba(93, 205, 255, 0.71);
+    transform: translate(-50%,50%);
+    z-index: 30;
+    animation: change-color-yellow 1s ease 3s 1 normal forwards;
+}
+@keyframes change-color-yellow
+{
+    0%   {color: rgba(175, 175, 175, 0.71)
+    }
+    100% {color: rgb(255, 250, 174)
+    }
+}
+@keyframes change-color-blue
+{
+    0%   {background-color: rgb(255, 255, 255)
+    }
+    100% {background-color: rgb(131, 188, 255)
+    }
+}
+@keyframes cloud-leave
+{
+    0%   {left: 50%}
+    20%   {left: 53%}
+    100% {left: -100%}
+}
+@keyframes cloud-move
+{
+    0%   {left: 100%; transform: translateX(0)}
+    100% {left: 0; transform: translateX(-100%)}
+}
+@keyframes sun-boost
+{
+    0%   {opacity: 1;transform:translate(-50%,-50%) scale(0)}
+    60% {opacity: 1;transform:translate(-50%,-50%) scale(1.3)}
+    85% {opacity: 1;transform:translate(-50%,-50%) scale(0.9)}
+    /*98% {opacity: 1;transform: scale(1.1)}*/
+    100% {opacity: 1;transform:translate(-50%,-50%) scale(1)}
+}
+#cloud0 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 20;
+    animation: cloud-leave 2s ease-out 2s 1 normal forwards;
+}
+#sun {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /*transform: translate(0,-100%);*/
+    transform: translate(-50%,-50%);
+    z-index: 19;
+    opacity: 0;
+    animation: sun-boost 0.5s ease 3s 1 normal forwards;
+}
+#cloud1{
+    position: fixed;
+    top: 20%;
+    animation-name: cloud-move;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-delay: -1s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+}
+#cloud2{
+    position: fixed;
+    top: 30%;
+    animation-name: cloud-move;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-delay: -2s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+}
+#cloud3{
+    position: fixed;
+    top: 10%;
+    animation-name: cloud-move;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+}
+#cloud4{
+    position: fixed;
+    top: 18%;
+    animation-name: cloud-move;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-delay: -1s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+}
+#cloud5{
+    position: fixed;
+    top: 25%;
+    animation-name: cloud-move;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+}
+#cloud6{
+    position: fixed;
+    top: 40%;
+    animation-name: cloud-move;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+}
+#cloud7{
+    position: fixed;
+    top: 57%;
+    animation-name: cloud-move;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-delay: -6s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+}
+#cloud8{
+    position: fixed;
+    top: 61%;
+    animation-name: cloud-move;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-delay: -3s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+}
+#cloud9{
+    position: fixed;
+    top: 0;
+    animation-name: cloud-move;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+}
+#cloud10{
+    position: fixed;
+    top: 75%;
+    animation-name: cloud-move;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-delay: -1s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+}
+#cloud11{
+    position: fixed;
+    top: 86%;
+    animation-name: cloud-move;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+}
+#cloud12{
+    position: fixed;
+    top: 94%;
+    animation-name: cloud-move;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: -1s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+}
