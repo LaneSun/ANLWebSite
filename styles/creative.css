@@ -1,0 +1,17 @@
+body {
+    background-color: #ffffff;
+}
+
+.cmd {
+    display: none;
+}
+
+.msg {
+    left: 10%;
+    bottom: 50%;
+    position: fixed;
+    font-size: 40px;
+    font-family: consolas, monospace;
+    color: rgb(89, 89, 89);
+    transform: translateY(50%);
+}
