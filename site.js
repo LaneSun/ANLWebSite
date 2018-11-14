@@ -136,7 +136,7 @@ window.SITE = {
     },
     creative_introduction: {
         title: "ANL - Home Page",
-        maskColor: "#afafaf",
+        maskColor: "#171717",
         // language=HTML
         html: `
             <link rel="stylesheet" href="styles/creative.css">
