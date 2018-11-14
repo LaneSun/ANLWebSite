@@ -14,7 +14,7 @@ window.SITE = {
                     <style>
                         .cmd{
                             font-size: 40px;
-                            animation: zoom-in 8s linear 0s 1 alternate;
+                            animation: zoom-in 8s ease 0s 1 alternate;
                         }
                     </style>
                 `;
@@ -41,7 +41,7 @@ window.SITE = {
                     })
                 }).then(() => {
                     return new Promise((resolve) => {
-                        window.setTimeout(resolve,4000);
+                        window.setTimeout(resolve,6000);
                         // Cmd.delayPrint(80, 2000, [
                         //     "freedom ?",
                         // ], resolve);
@@ -140,10 +140,13 @@ window.SITE = {
         // language=HTML
         html: `
             <link rel="stylesheet" href="styles/creative.css">
-            <div class="msg">Creative?</div>
+            <div class="tinkle">
+                <div class="msg">Creative?</div>
+                <canvas width="544" height="512" id="bubble" class="--canvasjs"></canvas>
+            </div>
         `,
         javascript: () => {
-            //
+            CanvasJS.init();
         }
     },
     fun_introduction: {
