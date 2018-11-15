@@ -4,24 +4,25 @@ window.SITE = {
         maskColor: "#afafaf",
         // language=HTML
         html: `
-            <link rel="stylesheet" href="index.css">
+            <link rel="stylesheet" href="styles/intro.css">
             <canvas class="hello-canvas-top"></canvas>
             <canvas class="hello-canvas-bottom"></canvas>
         `,
         onload: () => {
             if (!localStorage.getItem("anl-username")) {
-                document.getElementById("container").innerHTML += `
-                    <style>
-                        .cmd{
-                            font-size: 40px;
-                            animation: zoom-in 8s ease 0s 1 alternate;
-                        }
-                    </style>
-                `;
-                // Cmd.output.style.fontSize = "40px";
+                // document.getElementById("container").innerHTML += `
+                //     <style>
+                //         .cmd{
+                //             font-size: 40px;
+                //             /*animation: zoom-in 8s ease 0s 1 alternate;*/
+                //         }
+                //     </style>
+                // `;
+                Cmd.output.style.fontSize = "40px";
                 let promise = new Promise((resolve) => {
-                    Cmd.delayPrint(160, 0, [
-                        "Wanna a community, which is...",
+                    Cmd.delayPrint(120, 0, [
+                        "Wanna a community?","&br",
+                        "which is..."
                     ], resolve);
                 });
                 promise.then(() => {
@@ -82,8 +83,20 @@ window.SITE = {
             } else {
                 Cmd.show_inputer = true;
                 Cmd.bindKeyEvent(document);
+                Fun.cd("main");
                 //Show Select
             }
+        }
+    },
+    main: {
+        title: "ANL - Home Page",
+        maskColor: "rgba(255,255,255,0.4)",
+        // language=HTML
+        html: `
+            <link rel="stylesheet" href="styles/main.css">
+        `,
+        javascript: () => {
+            //
         }
     },
     web: {
@@ -91,7 +104,7 @@ window.SITE = {
         maskColor: "#2983af",
         // language=HTML
         html: `
-            <link rel="stylesheet" href="page-web.css">
+            <link rel="stylesheet" href="styles/web.css">
         `,
         javascript: () => {
             //
@@ -102,7 +115,7 @@ window.SITE = {
         maskColor: "#afafaf",
         // language=HTML
         html: `
-            <link rel="stylesheet" href="page-hardware.css">
+            <link rel="stylesheet" href="styles/hardware.css">
         `,
         javascript: () => {
             //
@@ -164,7 +177,9 @@ window.SITE = {
                     ・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・
                 </div>
             </div>
-            <div class="msg"><div id="w1">A</div><div id="w2">n</div><div id="w3">d</div><div id="w4">.</div><div id="w5">.</div><div id="w6">.</div><div id="w7">R</div><div id="w8">e</div><div id="w9">a</div><div id="w10">l</div><div id="w11">l</div><div id="w12">y</div><div id="fun">&nbsp;Fun&nbsp;</div><div id="w14">?</div></div>
+            <div class="msg">
+                <div id="w1">A</div><div id="w2">n</div><div id="w3">d</div><div id="w4">.</div><div id="w5">.</div><div id="w6">.</div><div id="w7">R</div><div id="w8">e</div><div id="w9">a</div><div id="w10">l</div><div id="w11">l</div><div id="w12">y</div><div id="fun">&nbsp;Fun&nbsp;</div><div id="w14">?</div>
+            </div>
         `,
     },
     end_introduction: {
