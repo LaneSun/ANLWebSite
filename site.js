@@ -10,15 +10,15 @@ window.SITE = {
         `,
         onload: () => {
             if (!localStorage.getItem("anl-username")) {
-                // document.getElementById("container").innerHTML += `
-                //     <style>
-                //         .cmd{
-                //             font-size: 40px;
-                //             /*animation: zoom-in 8s ease 0s 1 alternate;*/
-                //         }
-                //     </style>
-                // `;
-                Cmd.output.style.fontSize = "40px";
+                document.getElementById("container").innerHTML += `
+                    <style>
+                        .cmd{
+                            font-size: 40px;
+                            /*animation: zoom-in 8s ease 0s 1 alternate;*/
+                        }
+                    </style>
+                `;
+                // Cmd.output.style.fontSize = "40px";
                 let promise = new Promise((resolve) => {
                     Cmd.delayPrint(120, 0, [
                         "Wanna a community?","&br",
@@ -83,7 +83,7 @@ window.SITE = {
             } else {
                 Cmd.show_inputer = true;
                 Cmd.bindKeyEvent(document);
-                Fun.cd("main");
+                Fun.cd(()=>{},"main");
                 //Show Select
             }
         }
