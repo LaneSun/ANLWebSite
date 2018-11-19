@@ -4,12 +4,13 @@ window.SITE = {
         maskColor: "#afafaf",
         // language=HTML
         html: `
-            <link rel="stylesheet" href="styles/intro.css">
+            <link rel="stylesheet" href="styles/brain.css">
             <canvas class="hello-canvas-top"></canvas>
             <canvas class="hello-canvas-bottom"></canvas>
         `,
         onload: () => {
             if (!localStorage.getItem("anl-username")) {
+                // language=HTML
                 document.getElementById("container").innerHTML += `
                     <style>
                         .cmd{
@@ -97,6 +98,29 @@ window.SITE = {
         `,
         javascript: () => {
             //
+        }
+    },
+    intro: {
+        title: "ANL - Introduction",
+        maskColor: "rgba(255,255,255,0.4)",
+        // language=HTML
+        html: `
+            <link rel="stylesheet" href="styles/intro.css">
+            <div class="center">
+                <h1>Our Belief Our Motion</h1>
+                <h3>An Oath of Freedom</h3>
+                <hr>
+                <p>我们坚持自由软件，源于我们对人性的信心。</p>
+                <p>我们坚持开放源码，源于我们对商业的厌倦。</p>
+                <p>加入我们，一起进步。</p>
+                <hr>
+                <div class="link" id="back">↵ Back</div>
+            </div>
+        `,
+        javascript: () => {
+            document.getElementById("back").addEventListener("mousedown",() => {
+                Fun.cd(()=>{}, "main");
+            })
         }
     },
     web: {
